@@ -1,5 +1,5 @@
 module "jenkins_master" {
-   source 		    = 	"./module-jenkins"         
+   source 		    = 	"./module"         
    user 		       = 	"${var.user}"
    domain 		    = 	"${var.domain}"
    region 		    = 	"${var.region}"

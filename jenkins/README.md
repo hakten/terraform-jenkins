@@ -46,6 +46,7 @@ terraform apply -var-file configurations/YOUR_REGION/jenkins.tfvars
 
 
 ### If you only want to create jenkins_master, target below resources
+
 module.jenkins_master.aws_ami.centos
 module.jenkins_master.aws_iam_instance_profile.jenkins_admin_profile
 module.jenkins_master.aws_iam_role.jenkins_admin
@@ -56,3 +57,4 @@ module.jenkins_master.aws_route53_record.jenkins_master
 module.jenkins_master.aws_security_group.allow_ssh_and_jenkins
 module.jenkins_master.null_resource.jenkins_passwd
 
+terraform apply --target=module.jenkins_master.aws_ami.centos --target=module.jenkins_master.aws_iam_instance_profile.jenkins_admin_profile --target=module.jenkins_master.aws_iam_role.jenkins_admin --target=module.jenkins_master.aws_iam_role_policy.jenkins_admin_policy --target=module.jenkins_master.aws_instance.jenkins_master --target=module.jenkins_master.aws_key_pair.jenkins --target=module.jenkins_master.aws_route53_record.jenkins_master --target=module.jenkins_master.aws_security_group.allow_ssh_and_jenkins --target=module.jenkins_master.null_resource.jenkins_passwd
