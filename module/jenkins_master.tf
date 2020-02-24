@@ -20,7 +20,7 @@ resource "aws_instance" "jenkins_master" {
   key_name                    = "${var.key_name}"
   associate_public_ip_address = "true"
   security_groups             = ["allow_ssh_and_jenkins"]
-  iam_instance_profile = "${aws_iam_instance_profile.jenkins_admin_profile.name}",
+  iam_instance_profile        = "${aws_iam_instance_profile.jenkins_admin_profile.name}",
 
 
   provisioner "file" {
