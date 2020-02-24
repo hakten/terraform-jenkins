@@ -16,8 +16,7 @@ data "aws_ami" "centos" {
 resource "aws_instance" "jenkins_master" {
   depends_on                  = ["aws_key_pair.jenkins"]
   instance_type               = "${var.instance_type}"
-  ami                         = "ami-0ff760d16d9497662)
-"
+  ami                         = "ami-0ff760d16d9497662"
   key_name                    = "${var.key_name}"
   associate_public_ip_address = "true"
   security_groups             = ["allow_ssh_and_jenkins"]
