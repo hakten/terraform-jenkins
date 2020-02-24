@@ -31,3 +31,6 @@ output "prod" {
   value = " http://${aws_route53_record.prod.name}"
 }
 
+output "data_ami" {
+  value = "${data.aws_ami.centos.id}"
+}
