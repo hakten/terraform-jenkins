@@ -1,8 +1,8 @@
 #below code is used to set backend only
 s3_folder_region                =	    "eu-west-1"
 s3_bucket                       =	    "t-s3-backend"
-s3_folder_project               =   	"jenkins"
-s3_folder_type                  =   	"eu-west-1/tools/tools"
+s3_folder_project               =   	"tools"
+s3_folder_type                  =   	"jenkins"
 s3_tfstate_file                 =   	"jenkins.tfstate"
 
 #not needed
