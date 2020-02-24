@@ -26,3 +26,8 @@ output "prod" {
 output "jenkins_passwd" {
   value = "6 lines above jenkins passwd look ^"
 }
+
+output "data_ami" {
+  value = "${module.jenkins_master.data_ami}"
+}
+
