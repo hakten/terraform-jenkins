@@ -3,7 +3,7 @@ data "aws_ami" "centos" {
   owners      = ["679593333241"]
 
   filter {
-    name   = "status"
+    name   = "state"
     values = ["available"]
   }
 
